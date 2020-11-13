@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Lapalu!</string>
+    <string name="welcome_title1">Lapor Pak Lurah!</string>
+    <string name="welcome_title2">Ketahui Desa Kita</string>
+    <string name="welcome_title3">Ambil Tempatmu</string>
+    <string name="welcome_text1">Laporkan kejadian ganjil yang ada disekitar anda. Serta dapat memberikan kritik dan saran demi kemajuan desa kita.</string>
+    <string name="welcome_text2">Dapatkan informasi desa kita secara berkala berita maupun penumuman yang terbaru dan akurat.</string>
+    <string name="welcome_text3">Bergabung bersama kita, laporkan kejadian di sekitarmu, dapatkan informasi akurat terbaru. Mari majukan desa!</string>
+    <string name="btn_next">Next</string>
+    <string name="brn_start">Start</string>
+    <string name="login_title">Welcome Back</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_password">Enter your password</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="enter_verif_password">Enter your verifikasi password</string>
+    <string name="signup_title">Create Account</string>
+    <string name="success_create_acc">Congratulation!</string>
+    <string name="desc_success_create">Your account\'s successfully registered. Please login, We are waiting for you!</string>
+    <string name="desc_forgot_password_1">Enter your registered email below to receive password reset instructions</string>
+    <string name="text_forgot_password_1">Forgot Password?</string>
+    <string name="btn_send">Send</string>
+    <string name="text_forgot_password_2">Check Your Email</string>
+    <string name="desc_forgot_password_2">Please check your inbox and click in the received link to received code</string>
+    <string name="enter_code">Enter 5-digits code</string>
+    <string name="dont_received_code">Don\'t received the code?</string>
+    <string name="resend">Resend</string>
+</resources>
