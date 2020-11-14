@@ -15,7 +15,7 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="btn_login">Login</string>
     <string name="btn_sign_up">Sign Up</string>
-    <string name="enter_verif_password">Enter your verifikasi password</string>
+    <string name="enter_verif_password">Enter verificaton password</string>
     <string name="signup_title">Create Account</string>
     <string name="success_create_acc">Congratulation!</string>
     <string name="desc_success_create">Your account\'s successfully registered. Please login, We are waiting for you!</string>
@@ -27,4 +27,12 @@
     <string name="enter_code">Enter 5-digits code</string>
     <string name="dont_received_code">Don\'t received the code?</string>
     <string name="resend">Resend</string>
+    <string name="btn_confirm">confirm</string>
+    <string name="text_forgot_password_3">Reset Password</string>
+    <string name="desc_forgot_password_3">Enter the new password, then your password will be change!</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="remember_pass">Remember your password?</string>
+    <string name="login_here">Login Here</string>
+    <string name="btn_set_pass">Set Password</string>
+    <string name="desc_success_forgot">Your password has been reset successfully.</string>
 </resources>
