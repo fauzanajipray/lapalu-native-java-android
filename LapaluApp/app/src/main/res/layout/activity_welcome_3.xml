@@ -33,6 +33,7 @@
         android:textSize="36sp"
         android:textColor="@color/colorPrimaryDark"
         android:lineHeight="54dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 

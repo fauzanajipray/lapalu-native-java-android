@@ -13,7 +13,7 @@
     <string name="enter_your_email">Enter your email</string>
     <string name="enter_password">Enter your password</string>
     <string name="enter_email">Enter your email</string>
-    <string name="forgot_password">Forgot password?</string>
+    <string name="forgot_password">Forgot your password?</string>
     <string name="btn_login">Login</string>
     <string name="btn_sign_up">Sign Up</string>
     <string name="enter_verif_password">Enter verification password</string>
@@ -46,4 +46,5 @@
     <string name="password_verif_empty">Password verifikasi tidak bolek kosong</string>
     <string name="password_not_match">Password tidak sama</string>
     <string name="password_max">Password harus lebih dari 8 karakter</string>
+    <string name="reset">Reset</string>
 </resources>

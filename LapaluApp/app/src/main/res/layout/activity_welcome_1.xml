@@ -33,6 +33,7 @@
         android:textSize="36sp"
         android:textColor="@color/colorPrimaryDark"
         android:lineHeight="54dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
@@ -54,16 +55,16 @@
     <Button
         android:layout_width="160dp"
         android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/btn_primary_border"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/poppins"
+        android:onClick="clickGetStarted"
         android:text="@string/btn_next"
         android:textAlignment="center"
-        android:textSize="18sp"
-        android:fontFamily="@font/poppins"
         android:textColor="@color/colorPrimaryDark"
-        android:onClick="clickGetStarted"/>
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
