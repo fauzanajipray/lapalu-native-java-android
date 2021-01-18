@@ -144,6 +144,18 @@
         android:textColor="@color/colorPrimaryDark"
         android:onClick="clickSignUp" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSignUp"
+        android:visibility="invisible"
+        />
+
     <LinearLayout
         android:id="@+id/forgot"
         android:layout_width="match_parent"

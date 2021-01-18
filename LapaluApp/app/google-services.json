@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "710910946312",
+    "project_id": "lapaluapp-a114512",
+    "storage_bucket": "lapaluapp-a114512.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710910946312:android:7fec8b8034ddd7d0c935bd",
+        "android_client_info": {
+          "package_name": "com.faprayyy.lapaluapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710910946312-pa53npjmmmj28j8tderff8sumsubms27.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBygFQtUBHSqMiqc3-mlT5vJLq2stXLwnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710910946312-pa53npjmmmj28j8tderff8sumsubms27.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710910946312:android:ca7f499ec8ce0e65c935bd",
+        "android_client_info": {
+          "package_name": "com.udinus.nyoba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710910946312-pa53npjmmmj28j8tderff8sumsubms27.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBygFQtUBHSqMiqc3-mlT5vJLq2stXLwnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710910946312-pa53npjmmmj28j8tderff8sumsubms27.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
