@@ -86,4 +86,9 @@ public class ForgotPassword_1 extends AppCompatActivity {
         });
 
     }
+
+    public void toNoHpForgotPass(View view) {
+        startActivity(new Intent(getApplicationContext(), ForgotPassword_PhoneNumber.class));
+        finish();
+    }
 }

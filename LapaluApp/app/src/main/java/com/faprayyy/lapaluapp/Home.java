@@ -40,10 +40,11 @@ public class Home extends AppCompatActivity {
                     }
                 });
 
-//        if(fAuth.getCurrentUser() == null ){
-//            startActivity(new Intent(getApplicationContext(), Login.class));
-//            finish();
-//        }
+        fAuth = FirebaseAuth.getInstance();
+        if(fAuth.getCurrentUser() == null ){
+            startActivity(new Intent(getApplicationContext(), Login.class));
+            finish();
+        }
     }
 
     public void logout(View view) {
@@ -54,5 +55,9 @@ public class Home extends AppCompatActivity {
 
     public void toSaranActivity(View view) {
         startActivity(new Intent(getApplicationContext(), SaranActivity.class));
+    }
+
+    public void toUserProfile(View view) {
+        startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
     }
 }

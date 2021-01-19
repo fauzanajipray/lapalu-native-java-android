@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_lapalu_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddSaran"></activity>
+        <activity android:name=".ForgotPassword_PhoneNumber2"></activity>
+        <activity android:name=".ForgotPassword_PhoneNumber" />
+        <activity android:name=".UserProfileEdit" />
+        <activity android:name=".UserProfileActivity" />
+        <activity android:name=".AddSaran" />
         <activity android:name=".SaranActivity" />
         <activity android:name=".ForgotPassword_4" />
         <activity android:name=".ForgotPassword_3" />

@@ -22,6 +22,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -50,6 +52,7 @@ public class signUp extends AppCompatActivity {
         edVerifPassword = findViewById(R.id.edVerifPassword);
         progressBar = findViewById(R.id.progressBar);
 
+
         firstNameEmpty = getResources().getString(R.string.first_name_empty);
         lastNameEmpty = getResources().getString(R.string.last_name_empty);
         emailEmpty = getResources().getString(R.string.email_empty);
@@ -72,6 +75,7 @@ public class signUp extends AppCompatActivity {
         final String email = edEmail.getText().toString().trim();
         String pass = edPassword.getText().toString().trim();
         String confirmPass = edVerifPassword.getText().toString().trim();
+        final Date currentTime = Calendar.getInstance().getTime();
 
         if(TextUtils.isEmpty(firstName)){
             Toast.makeText(view.getContext(), firstNameEmpty, Toast.LENGTH_SHORT).show();
@@ -111,6 +115,7 @@ public class signUp extends AppCompatActivity {
                         user.put("firstName", firstName);
                         user.put("lastName", lastName);
                         user.put("email", email);
+                        user.put("created", currentTime);
 
                         documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
