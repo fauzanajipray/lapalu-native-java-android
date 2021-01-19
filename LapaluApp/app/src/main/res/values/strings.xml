@@ -28,9 +28,9 @@
     <string name="text_forgot_password_1">Forgot Password?</string>
     <string name="btn_send">Send</string>
     <string name="text_forgot_password_2">Check Your Email</string>
-    <string name="desc_forgot_password_2">Please check your inbox and click in the received link to received code</string>
+    <string name="desc_forgot_password_2">Please check your inbox and click in the received link to reset password</string>
     <string name="enter_code">Enter 5-digits code</string>
-    <string name="dont_received_code">Don\'t received the code?</string>
+    <string name="dont_received_email">Don\'t received the email?</string>
     <string name="resend">Resend</string>
     <string name="btn_confirm">confirm</string>
     <string name="text_forgot_password_3">Reset Password</string>
@@ -48,8 +48,6 @@
     <string name="email_not_valid">Gunakan format email</string>
     <string name="password_empty">Password tidak boleh kosong</string>
     <string name="form_empty">Inputan tidak boleh kosong</string>
-    <string name="code_empty">Code verifikasi tidak boleh kosong</string>
-    <string name="code_max_length">Code tidak boleh kurang dari 5-digit</string>
     <string name="password_verif_empty">Password verifikasi tidak bolek kosong</string>
     <string name="password_not_match">Password tidak sama</string>
     <string name="password_max">Password harus lebih dari 8 karakter</string>

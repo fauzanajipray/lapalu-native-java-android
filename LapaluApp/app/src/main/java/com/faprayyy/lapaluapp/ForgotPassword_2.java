@@ -18,24 +18,16 @@ public class ForgotPassword_2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password_2);
-
-        edCode = findViewById(R.id.edCode);
-        codeEmpty = getResources().getString(R.string.code_empty);
-        codeMaxLength = getResources().getString(R.string.code_max_length);
     }
 
     public void clickToNext(View view) {
-        if(TextUtils.isEmpty(edCode.getText().toString().trim())){
-            Toast.makeText(view.getContext(), codeEmpty, Toast.LENGTH_SHORT).show();
-        }
-        else if (edCode.length() != 5){
-            Toast.makeText(view.getContext(), codeMaxLength, Toast.LENGTH_LONG).show();
-        }
-        else {
-            Intent i = new Intent(this, ForgotPassword_3.class);
-            startActivity(i);
-            finish();
-        }
+        Intent i = new Intent(this, Login.class);
+        startActivity(i);
+        finish();
     }
 
+    public void toForgot(View view) {
+        startActivity(new Intent(getApplicationContext(), ForgotPassword_1.class));
+        finish();
+    }
 }
