@@ -14,9 +14,9 @@
         android:layout_marginTop="70dp"
         android:fontFamily="@font/poppins_semibold"
         android:lineHeight="54dp"
-        android:text="Hello there!"
+        android:text="@string/hello_there"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="36sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

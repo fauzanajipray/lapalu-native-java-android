@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
@@ -13,30 +14,44 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import io.perfmark.Tag;
 
 public class signUp extends AppCompatActivity {
 
-    EditText edEmail, edPassword, edVerifPassword, edFullName;
-    String emailEmpty, emailNotValid, passwordEmpty, passwordVerifEmpty, passwordNotMatch, passwordMax, fullNameEmpty;
+    EditText edEmail, edPassword, edVerifPassword, edFirstName, edLasName;
+    String emailEmpty, emailNotValid, passwordEmpty, passwordVerifEmpty, passwordNotMatch, passwordMax, firstNameEmpty, lastNameEmpty;
     FirebaseAuth fAuth;
     ProgressBar progressBar;
+    FirebaseFirestore db;
+    String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         fAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
 
-        edFullName = findViewById(R.id.edFullName);
+        edFirstName = findViewById(R.id.edFirstName);
+        edLasName = findViewById(R.id.edLastName);
         edEmail = findViewById(R.id.edEmail);
         edPassword = findViewById(R.id.edPassword);
         edVerifPassword = findViewById(R.id.edVerifPassword);
         progressBar = findViewById(R.id.progressBar);
 
-        fullNameEmpty = getResources().getString(R.string.fullname_empty);
+        firstNameEmpty = getResources().getString(R.string.first_name_empty);
+        lastNameEmpty = getResources().getString(R.string.last_name_empty);
         emailEmpty = getResources().getString(R.string.email_empty);
         emailNotValid = getResources().getString(R.string.email_not_valid);
         passwordEmpty = getResources().getString(R.string.password_empty);
@@ -52,12 +67,17 @@ public class signUp extends AppCompatActivity {
     }
 
     public void clickSignUp(View view) {
-        String email = edEmail.getText().toString().trim();
+        final String firstName = edFirstName.getText().toString().trim();
+        final String lastName = edLasName.getText().toString().trim();
+        final String email = edEmail.getText().toString().trim();
         String pass = edPassword.getText().toString().trim();
         String confirmPass = edVerifPassword.getText().toString().trim();
 
-        if(TextUtils.isEmpty(edFullName.getText().toString().trim())){
-            Toast.makeText(view.getContext(), fullNameEmpty, Toast.LENGTH_SHORT).show();
+        if(TextUtils.isEmpty(firstName)){
+            Toast.makeText(view.getContext(), firstNameEmpty, Toast.LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(lastName)){
+            Toast.makeText(view.getContext(), lastNameEmpty, Toast.LENGTH_SHORT).show();
         }
         else if(TextUtils.isEmpty(edEmail.getText().toString().trim())){
             Toast.makeText(view.getContext(), emailEmpty, Toast.LENGTH_SHORT).show();
@@ -84,7 +104,25 @@ public class signUp extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        Toast.makeText(signUp.this, "User Created", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(signUp.this, "User Created", Toast.LENGTH_SHORT).show();
+                        userID = fAuth.getCurrentUser().getUid();
+                        DocumentReference documentReference = db.collection("users").document(userID);
+                        Map<String, Object> user = new HashMap<>();
+                        user.put("firstName", firstName);
+                        user.put("lastName", lastName);
+                        user.put("email", email);
+
+                        documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Log.d("TAG", "On Success: user profile is created for " + userID );
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.d("TAG", "on Failure : " + e.toString());
+                            }
+                        });
                         startActivity(new Intent(getApplicationContext(), SignUpSuccess.class));
                         finish();
                     }else {
@@ -97,5 +135,11 @@ public class signUp extends AppCompatActivity {
 
     public static boolean isValidEmail (CharSequence email) {
         return  (Patterns.EMAIL_ADDRESS.matcher(email).matches());
+    }
+
+    public void clickLogin(View view) {
+        Intent i = new Intent(signUp.this, Login.class);
+        startActivity(i);
+        finish();
     }
 }
