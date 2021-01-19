@@ -60,10 +60,10 @@ public class signUp extends AppCompatActivity {
         passwordMax = getResources().getString(R.string.password_max);
 
 //        // Otomatis Pindah Home Kalau Sudah Login
-//        if(fAuth.getCurrentUser() != null ){
-//            startActivity(new Intent(getApplicationContext(), Home.class));
-//            finish();
-//        }
+        if(fAuth.getCurrentUser() != null ){
+            startActivity(new Intent(getApplicationContext(), Home.class));
+            finish();
+        }
     }
 
     public void clickSignUp(View view) {
@@ -116,6 +116,8 @@ public class signUp extends AppCompatActivity {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Log.d("TAG", "On Success: user profile is created for " + userID );
+                                startActivity(new Intent(getApplicationContext(), SignUpSuccess.class));
+                                finish();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
@@ -123,8 +125,7 @@ public class signUp extends AppCompatActivity {
                                 Log.d("TAG", "on Failure : " + e.toString());
                             }
                         });
-                        startActivity(new Intent(getApplicationContext(), SignUpSuccess.class));
-                        finish();
+
                     }else {
                         Toast.makeText(signUp.this, "Error! "+ task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }

@@ -18,6 +18,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 public class Home extends AppCompatActivity {
 
     FirebaseFirestore db;
+    FirebaseAuth fAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +39,20 @@ public class Home extends AppCompatActivity {
                         }
                     }
                 });
+
+//        if(fAuth.getCurrentUser() == null ){
+//            startActivity(new Intent(getApplicationContext(), Login.class));
+//            finish();
+//        }
     }
 
     public void logout(View view) {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(getApplicationContext(), Login.class));
         finish();
+    }
+
+    public void toSaranActivity(View view) {
+        startActivity(new Intent(getApplicationContext(), SaranActivity.class));
     }
 }
