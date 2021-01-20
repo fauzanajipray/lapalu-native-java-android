@@ -63,7 +63,8 @@
         android:fontFamily="@font/poppins"
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/subTitle"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="toActivityNewsMain"/>
 
     <Button
         android:id="@+id/buttonToKritikSaran"

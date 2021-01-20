@@ -53,8 +53,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_saran"
         android:layout_width="match_parent"
-        android:layout_marginTop="20dp"
+        android:layout_height="match_parent"
         android:layout_marginHorizontal="20dp"
-        android:layout_height="match_parent" />
+        android:layout_marginTop="20dp" />
 
 </LinearLayout>

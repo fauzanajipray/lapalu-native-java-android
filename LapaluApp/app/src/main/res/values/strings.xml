@@ -60,4 +60,8 @@
     <string name="action_settings">Settings</string>
 
     <string name="hello_there">Hello there!</string>
+
+    <string name="title">Judul Novel</string>
+    <string name="category">Kategori</string>
+    <string name="description">Deskripsi</string>
 </resources>

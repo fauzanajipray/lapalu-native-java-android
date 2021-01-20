@@ -60,4 +60,8 @@ public class Home extends AppCompatActivity {
     public void toUserProfile(View view) {
         startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
     }
+
+    public void toActivityNewsMain(View view) {
+        startActivity(new Intent(getApplicationContext(), NewsMainPage.class));
+    }
 }
